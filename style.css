@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'young';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+}
+
+:root {
+    --dark-rose: #7A284E;
+    --light-rose: #FFF7FB;
+    --dark-stone: #312E2C;
+    --medium-stone: #5F564D;
+    --light-stone: #E3DDD7;
+    --sand-stone: #F3E5D7;
+    --brown: #854632;
+    --white: #FFFFFF;
+
+    --young-1-size: 4rem;
+    --young-1-family: 'young';
+    --young-1-line-height: 100%;
+
+    --young-1-size-mobile: 3.6rem;
+
+    --young-2-size: 2.8rem;
+    --young-2-family: 'young';
+    --young-2-line-height: 100%;
+
+    --outfit-semibold-size: 2rem;
+    --outfit-semibold-family: 'outfit';
+    --outfit-semibold-line-height: 100%;
+    --outfit-semibold-weight: 600;
+
+    --outfit-regular-size: 1.6rem;
+    --outfit-regular-family: 'outfit';
+    --outfit-regular-line-height: 150%;
+    --outfit-regular-weight: 400;
+
+    --outfit-bold-size: 1.6rem;
+    --outfit-bold-family: 'outfit';
+    --outfit-bold-line-height: 150%;
+    --outfit-bold-weight: 700;
+
+    --padding-1: 0.8rem;
+    --padding-2: 1.2rem;
+    --padding-3: 1.6rem;
+    --padding-4: 2.4rem;
+    --padding-5: 3.2rem;
+    --padding-6: 4rem;
+    --padding-7: 4.8rem;
+    --padding-8: 12.8rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--sand-stone);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-8) var(--padding-7);
+}
+
+main {
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    width: clamp(61.6rem, 80vw, 73.6rem);
+    min-width: 32rem;
+    padding: var(--padding-6);
+    gap: var(--padding-6);
+
+    border-radius: 24px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-5);
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-4);
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    border-radius: 12px;
+    
+    object-fit: cover;
+    display: block;
+}
+
+h1 {
+    font-family: var(--young-1-family);
+    font-size: var(--young-1-size);
+    line-height: var(--young-1-line-height);
+    color: var(--dark-stone);
+}
+
+h2 {
+    font-family: var(--young-2-family);
+    font-size: var(--young-2-size);
+    line-height: var(--young-2-line-height);
+    color: var(--brown);
+}
+
+h3 {
+    font-family: var(--outfit-semibold-family);
+    font-size: var(--outfit-semibold-size);
+    font-weight: var(--outfit-semibold-weight);
+    line-height: var(--outfit-semibold-line-height);
+    color: var(--dark-rose);
+}
+
+summary {
+    font-family: var(--outfit-regular-family);
+    font-size: var(--outfit-regular-size);
+    font-weight: var(--outfit-regular-weight);
+    line-height: var(--outfit-regular-line-height);
+    color: var(--medium-stone)
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-4);
+}
+
+.prep {
+    border-radius: 16px;
+    background-color: var(--light-rose);
+    gap: var(--padding-3);
+    padding: var(--padding-4);
+}
+
+.separator {
+    position: relative;
+    height: 0;               
+    width: 100%;
+}
+
+.separator::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background-color: var(--light-stone);
+}
+
+ul,
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-1);
+    padding-left: var(--padding-1);
+
+    font-family: var(--outfit-regular-family);
+    font-size: var(--outfit-regular-size);
+    font-weight: var(--outfit-regular-weight);
+    line-height: var(--outfit-regular-line-height);
+    color: var(--medium-stone);
+}
+
+ul {
+    list-style: none;
+}
+
+ul > li {
+    display: flex;
+    align-items: center;
+}
+
+ul > li::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--brown);
+    margin-right: var(--padding-2);
+}
+
+.prep > ul > li::before {
+    background: var(--dark-rose);
+}
+
+ol {
+    list-style-position: outside;
+    padding-left: var(--padding-4);
+}
+
+ol > li::marker {
+    font-weight: bold;
+    color: var(--brown);
+}
+
+li > span,
+li > div {
+    padding-left: var(--padding-3);
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    gap: var(--padding-2);
+
+    font-family: var(--outfit-regular-family);
+    font-size: var(--outfit-regular-size);
+    font-weight: var(--outfit-regular-weight);
+    line-height: var(--outfit-regular-line-height);
+    color: var(--medium-stone);
+}
+
+th, td {
+    border: none; 
+}
+
+tr:not(:last-child):not(:first-child) {
+    line-height: calc(var(--outfit-regular-line-height)*2);
+}
+
+tr:last-child > th,
+tr:last-child > td {
+    padding-top: var(--padding-2);
+}
+
+tr:first-child > th,
+tr:first-child > td {
+    padding-bottom: var(--padding-2);
+}
+
+tr:not(:last-child) td,
+tr:not(:last-child) th {
+    box-shadow: 0 1px 0 var(--light-stone);
+}
+
+tr > th {
+    padding-left: var(--padding-5);
+    font-weight: var(--outfit-regular-weight);
+}
+
+tr > td {
+    padding-left: var(--padding-3);
+}
+
+footer { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    padding: 8px 0;
+    background: transparent;
+    pointer-events: none;
+}
+    
+footer a { 
+    pointer-events: auto;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        padding: 0;
+    }
+    main {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0;
+        gap: 0;
+    }
+    img {
+        aspect-ratio: 9/20;
+        height: clamp(171px, 45vw, 300px);
+        border-radius: 0px;
+    }
+    article {
+        padding: var(--padding-6) var(--padding-5);
+    }
+    h1 {
+        font-size: var(--young-1-size-mobile);
+    }
+}
