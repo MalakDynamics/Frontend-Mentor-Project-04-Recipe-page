@@ -71,7 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--padding-8) var(--padding-7);
+    padding: var(--padding-8) 0;
 }
 
 main {
