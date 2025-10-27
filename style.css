@@ -55,7 +55,6 @@
     --padding-8: 12.8rem;
 
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -87,7 +86,6 @@ main {
 
     border-radius: 24px;
 }
-
 article {
     display: flex;
     flex-direction: column;
@@ -114,15 +112,15 @@ h1 {
     font-size: var(--young-1-size);
     line-height: var(--young-1-line-height);
     color: var(--dark-stone);
+    font-weight: 400;
 }
-
 h2 {
     font-family: var(--young-2-family);
     font-size: var(--young-2-size);
     line-height: var(--young-2-line-height);
     color: var(--brown);
+    font-weight: 400;
 }
-
 h3 {
     font-family: var(--outfit-semibold-family);
     font-size: var(--outfit-semibold-size);
@@ -130,7 +128,6 @@ h3 {
     line-height: var(--outfit-semibold-line-height);
     color: var(--dark-rose);
 }
-
 summary {
     font-family: var(--outfit-regular-family);
     font-size: var(--outfit-regular-size);
@@ -222,7 +219,6 @@ li > div {
 table {
     text-align: left;
     border-collapse: collapse;
-    gap: var(--padding-2);
 
     font-family: var(--outfit-regular-family);
     font-size: var(--outfit-regular-size);
@@ -231,8 +227,19 @@ table {
     color: var(--medium-stone);
 }
 
+td {
+    font-family: var(--outfit-bold-family);
+    font-weight: var(--outfit-bold-weight);
+    color: var(--brown);
+}
+tr {
+    display: flex;
+    gap: var(--padding-3);
+    padding: 0 var(--padding-5);
+}
 th, td {
     border: none; 
+    width: 50%;
 }
 
 tr:not(:last-child):not(:first-child) {
@@ -249,18 +256,12 @@ tr:first-child > td {
     padding-bottom: var(--padding-2);
 }
 
-tr:not(:last-child) td,
-tr:not(:last-child) th {
+tr:not(:last-child) {
     box-shadow: 0 1px 0 var(--light-stone);
 }
 
 tr > th {
-    padding-left: var(--padding-5);
     font-weight: var(--outfit-regular-weight);
-}
-
-tr > td {
-    padding-left: var(--padding-3);
 }
 
 footer { 
@@ -279,6 +280,7 @@ footer a {
     pointer-events: auto;
     color: hsl(228, 45%, 44%); 
 }
+
 
 @media screen and (max-width: 630px) {
     body {
